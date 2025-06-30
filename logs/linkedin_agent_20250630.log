@@ -847,3 +847,511 @@ AttributeError: 'LinkedInSourcingAgent' object has no attribute 'search_candidat
 2025-06-30 16:04:41,768 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
 2025-06-30 16:04:41,768 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
 2025-06-30 16:04:41,769 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751295881 in 0.18s
+2025-06-30 17:41:58,535 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:42:01,790 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:42:01,790 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:42:01,804 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:42:01,807 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:42:01,807 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:42:01,807 - __main__ - [32mINFO[0m - main.py:159 - Configuration loaded from .env
+2025-06-30 17:42:01,808 - __main__ - [32mINFO[0m - main.py:199 - Searching for candidates: Senior Python Developer
+2025-06-30 17:42:01,808 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 17:42:01,810 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:42:01,810 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:42:01,867 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:42:01,867 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 17:42:01,926 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 17:42:01,927 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:42:01,927 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:42:01,927 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 17:42:01,928 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 17:42:01,928 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 17:42:01,928 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:42:01,929 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 17:42:01,929 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 17:42:01,929 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:42:01,930 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 17:42:01,930 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 17:42:01,931 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='Senior Python Developer', location='San Francisco', limit=3
+2025-06-30 17:42:02,107 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:42:02,108 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 3 demo candidates for query: 'Senior Python Developer San Francisco'
+2025-06-30 17:42:02,109 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 3 demo candidates
+2025-06-30 17:42:02,110 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 3 candidates for query: 'Senior Python Developer San Francisco' (Demo: True)
+2025-06-30 17:42:02,111 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 3 candidates
+2025-06-30 17:42:02,111 - __main__ - [32mINFO[0m - main.py:214 - Found 3 candidates
+2025-06-30 17:45:11,077 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:45:11,674 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:45:11,809 - __main__ - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 17:45:11,809 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 17:45:11,811 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:45:11,811 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:45:11,871 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:45:11,871 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 17:45:11,910 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 17:45:11,911 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:45:11,911 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:45:11,912 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 17:45:11,912 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 17:45:11,912 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 17:45:11,913 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:45:11,913 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 17:45:11,914 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 17:45:11,914 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:45:11,915 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 17:45:11,915 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 17:45:11,918 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:45:11,919 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:45:11,919 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:45:11,920 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 17:45:11,921 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 17:45:11,921 - __main__ - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 17:46:28,856 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751301988
+2025-06-30 17:46:28,857 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='developer python aws', location='San Francisco', limit=20
+2025-06-30 17:46:29,016 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:46:29,016 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 20 demo candidates for query: 'developer python aws San Francisco'
+2025-06-30 17:46:29,017 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 17:46:29,017 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'developer python aws San Francisco' (Demo: True)
+2025-06-30 17:46:29,018 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 17:46:29,019 - __main__ - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751301988
+2025-06-30 17:46:29,023 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,024 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,024 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,025 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,025 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,026 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,026 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,026 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,026 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,027 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,027 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for David Park: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,027 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:29,030 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751301988 in 0.17s
+2025-06-30 17:46:44,808 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302004
+2025-06-30 17:46:44,808 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='developer python aws', location='San Francisco', limit=20
+2025-06-30 17:46:44,924 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:46:44,925 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 20 demo candidates for query: 'developer python aws San Francisco'
+2025-06-30 17:46:44,925 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 17:46:44,925 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'developer python aws San Francisco' (Demo: True)
+2025-06-30 17:46:44,925 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 17:46:44,926 - __main__ - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751302004
+2025-06-30 17:46:44,927 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,928 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,928 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,928 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,929 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,929 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,929 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,929 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,930 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,930 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,930 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for David Park: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,930 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:46:44,931 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751302004 in 0.12s
+2025-06-30 17:51:14,273 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302274
+2025-06-30 17:51:14,274 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='developer python', location='San Francisco', limit=20
+2025-06-30 17:51:14,425 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:51:14,426 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 20 demo candidates for query: 'developer python San Francisco'
+2025-06-30 17:51:14,427 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 17:51:14,428 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'developer python San Francisco' (Demo: True)
+2025-06-30 17:51:14,428 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 17:51:14,428 - __main__ - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751302274
+2025-06-30 17:51:14,430 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,431 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,431 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,432 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,432 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,433 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,433 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,434 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,435 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,435 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,436 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for David Park: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,436 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:51:14,437 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751302274 in 0.16s
+2025-06-30 17:51:59,098 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:52:00,725 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:52:00,725 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:52:00,735 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:52:00,737 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:52:00,737 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:52:00,738 - __main__ - [32mINFO[0m - main.py:159 - Configuration loaded from .env
+2025-06-30 17:52:00,738 - __main__ - [32mINFO[0m - main.py:199 - Searching for candidates: Senior Python Developer
+2025-06-30 17:52:00,738 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 17:52:00,740 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:52:00,740 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:52:00,792 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:52:00,793 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 17:52:00,842 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 17:52:00,843 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:52:00,843 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:52:00,844 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 17:52:00,844 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 17:52:00,844 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 17:52:00,845 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:52:00,845 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 17:52:00,845 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 17:52:00,846 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:52:00,846 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 17:52:00,847 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 17:52:00,847 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='Senior Python Developer', location='San Francisco', limit=2
+2025-06-30 17:52:01,016 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:52:01,016 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 2 demo candidates for query: 'Senior Python Developer San Francisco'
+2025-06-30 17:52:01,017 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 2 demo candidates
+2025-06-30 17:52:01,017 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 2 candidates for query: 'Senior Python Developer San Francisco' (Demo: True)
+2025-06-30 17:52:01,017 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 2 candidates
+2025-06-30 17:52:01,018 - __main__ - [32mINFO[0m - main.py:214 - Found 2 candidates
+2025-06-30 17:52:01,018 - linkedin_sourcing_agent.utils.export_manager - [33mWARNING[0m - export_manager.py:70 - Google service account file not found: service_account.json
+2025-06-30 17:52:01,019 - __main__ - [32mINFO[0m - main.py:548 - Saving results to: outputs/json_data\search_Senior_Python_Developer_20250630_175201.json
+2025-06-30 17:52:02,019 - linkedin_sourcing_agent.utils.export_manager - [32mINFO[0m - export_manager.py:505 - Applied formatting to outputs/excel_exports\search_Senior_Python_Developer_20250630_175201.xlsx
+2025-06-30 17:52:02,020 - linkedin_sourcing_agent.utils.export_manager - [32mINFO[0m - export_manager.py:135 - Successfully exported 2 candidates to outputs/excel_exports\search_Senior_Python_Developer_20250630_175201.xlsx
+2025-06-30 17:52:59,420 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302379
+2025-06-30 17:52:59,420 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='developer python', location='San Francisco', limit=20
+2025-06-30 17:52:59,810 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:52:59,811 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 20 demo candidates for query: 'developer python San Francisco'
+2025-06-30 17:52:59,812 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 17:52:59,813 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'developer python San Francisco' (Demo: True)
+2025-06-30 17:52:59,813 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 17:52:59,813 - __main__ - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751302379
+2025-06-30 17:52:59,814 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,815 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,816 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,816 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,817 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,817 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,817 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,817 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,818 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,819 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,820 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for David Park: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,820 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:52:59,820 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751302379 in 0.40s
+2025-06-30 17:54:17,365 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302457
+2025-06-30 17:54:17,365 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='developer python fintech startup', location='San Francisco', limit=20
+2025-06-30 17:54:17,432 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:54:17,432 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 20 demo candidates for query: 'developer python fintech startup San Francisco'
+2025-06-30 17:54:17,433 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 17:54:17,433 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'developer python fintech startup San Francisco' (Demo: True)
+2025-06-30 17:54:17,433 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 17:54:17,434 - __main__ - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751302457
+2025-06-30 17:54:17,436 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,436 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,436 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,436 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,437 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,437 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,437 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,437 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,438 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,438 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,438 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for David Park: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,438 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:54:17,438 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751302457 in 0.07s
+2025-06-30 17:58:31,887 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302711
+2025-06-30 17:58:31,888 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='engineer python fintech', location='San Francisco', limit=6
+2025-06-30 17:58:32,234 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:58:32,234 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 6 demo candidates for query: 'engineer python fintech San Francisco'
+2025-06-30 17:58:32,235 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 5 demo candidates
+2025-06-30 17:58:32,235 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 5 candidates for query: 'engineer python fintech San Francisco' (Demo: True)
+2025-06-30 17:58:32,236 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 5 candidates
+2025-06-30 17:58:32,236 - __main__ - [32mINFO[0m - api_server.py:143 - Found 5 candidates for job job_1751302711
+2025-06-30 17:58:32,237 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:58:32,237 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:58:32,238 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:58:32,238 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:58:32,238 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:58:32,238 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:58:32,238 - __main__ - [32mINFO[0m - api_server.py:210 - Successfully processed job job_1751302711 in 0.35s
+2025-06-30 17:59:10,758 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:59:11,679 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 17:59:11,801 - __main__ - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 17:59:11,802 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 17:59:11,804 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:59:11,805 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:59:11,853 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:59:11,854 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 17:59:11,900 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 17:59:11,901 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:59:11,901 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 17:59:11,901 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 17:59:11,902 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 17:59:11,903 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 17:59:11,903 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:59:11,904 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 17:59:11,905 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 17:59:11,905 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:59:11,907 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 17:59:11,907 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 17:59:11,910 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 17:59:11,911 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 17:59:11,911 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 17:59:11,912 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 17:59:11,912 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 17:59:11,913 - __main__ - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 17:59:34,723 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302774
+2025-06-30 17:59:34,724 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='engineer python fintech', location='San Francisco', limit=4
+2025-06-30 17:59:34,881 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 17:59:34,881 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 4 demo candidates for query: 'engineer python fintech San Francisco'
+2025-06-30 17:59:34,882 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 4 demo candidates
+2025-06-30 17:59:34,883 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 4 candidates for query: 'engineer python fintech San Francisco' (Demo: True)
+2025-06-30 17:59:34,884 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 4 candidates
+2025-06-30 17:59:34,885 - __main__ - [32mINFO[0m - api_server.py:143 - Found 4 candidates for job job_1751302774
+2025-06-30 17:59:34,889 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:59:34,889 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:59:34,889 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:59:34,890 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 17:59:34,890 - __main__ - [31mERROR[0m - api_server.py:216 - Error processing job job_1751302774: name '_calculate_education_score' is not defined
+2025-06-30 18:01:41,216 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:01:41,755 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:01:41,819 - __main__ - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:01:41,819 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:01:41,821 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:01:41,821 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:01:41,862 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:01:41,862 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:01:41,908 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:01:41,909 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:01:41,909 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:01:41,909 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:01:41,910 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:01:41,910 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:01:41,910 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:01:41,910 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:01:41,911 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:01:41,911 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:01:41,912 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:01:41,912 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:01:41,915 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:01:41,915 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:01:41,916 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:01:41,916 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 18:01:41,916 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:01:41,916 - __main__ - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:02:06,030 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751302926
+2025-06-30 18:02:06,031 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='engineer python fintech', location='San Francisco', limit=4
+2025-06-30 18:02:06,599 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 18:02:06,600 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 4 demo candidates for query: 'engineer python fintech San Francisco'
+2025-06-30 18:02:06,601 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 4 demo candidates
+2025-06-30 18:02:06,601 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 4 candidates for query: 'engineer python fintech San Francisco' (Demo: True)
+2025-06-30 18:02:06,602 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 4 candidates
+2025-06-30 18:02:06,603 - __main__ - [32mINFO[0m - api_server.py:143 - Found 4 candidates for job job_1751302926
+2025-06-30 18:02:06,606 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:02:06,606 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:02:06,607 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:02:06,608 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:02:06,608 - __main__ - [32mINFO[0m - api_server.py:212 - Successfully processed job Backend fintech engi in 0.58s
+2025-06-30 18:11:08,814 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:11:09,455 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:11:09,538 - __main__ - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:11:09,539 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:11:09,542 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:11:09,543 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:11:09,595 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:11:09,596 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:11:09,637 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:11:09,637 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:09,638 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:11:09,638 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:11:09,638 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:11:09,638 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:11:09,639 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:09,639 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:11:09,640 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:11:09,640 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:09,641 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:11:09,641 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:11:09,643 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:11:09,643 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:11:09,643 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:09,644 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 18:11:09,644 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:11:09,644 - __main__ - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:11:38,913 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:11:40,090 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:11:40,245 - __main__ - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:11:40,246 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:11:40,249 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:11:40,249 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:11:40,297 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:11:40,297 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:11:40,340 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:11:40,340 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:40,341 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:11:40,341 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:11:40,342 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:11:40,342 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:11:40,342 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:40,343 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:11:40,343 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:11:40,343 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:40,344 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:11:40,344 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:11:40,346 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:11:40,347 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:11:40,347 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:11:40,347 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 18:11:40,347 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:11:40,347 - __main__ - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:12:50,985 - __main__ - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751303570
+2025-06-30 18:12:50,985 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='engineer developer python machine learning ai', location='Mountain View', limit=10
+2025-06-30 18:12:51,723 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 18:12:51,724 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 10 demo candidates for query: 'engineer developer python machine learning ai Mountain View'
+2025-06-30 18:12:51,724 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 18:12:51,725 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'engineer developer python machine learning ai Mountain View' (Demo: True)
+2025-06-30 18:12:51,726 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 18:12:51,726 - __main__ - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751303570
+2025-06-30 18:12:51,730 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,731 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,732 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,732 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,733 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,734 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,734 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,735 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,736 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,736 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:12:51,738 - __main__ - [32mINFO[0m - api_server.py:212 - Successfully processed job 
+    Software Engine in 0.75s
+2025-06-30 18:17:52,140 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:17:53,175 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:17:53,285 - __main__ - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:17:53,286 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:17:53,289 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:17:53,289 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:17:53,357 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:17:53,357 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:17:53,433 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:17:53,434 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:17:53,435 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:17:53,436 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:17:53,436 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:17:53,437 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:17:53,438 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:17:53,438 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:17:53,439 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:17:53,439 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:17:53,440 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:17:53,440 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:17:53,442 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:17:53,442 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:17:53,443 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:17:53,444 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 18:17:53,445 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:17:53,445 - __main__ - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:18:08,062 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:18:09,084 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:18:09,156 - api_server - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:18:09,156 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:18:09,159 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:18:09,159 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:18:09,216 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:18:09,217 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:18:09,266 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:18:09,266 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:18:09,267 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:18:09,267 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:18:09,267 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:18:09,267 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:18:09,268 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:18:09,268 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:18:09,268 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:18:09,269 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:18:09,269 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:18:09,270 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:18:09,272 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:18:09,273 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:18:09,273 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:18:09,273 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 18:18:09,274 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:18:09,274 - api_server - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:23:16,974 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:23:19,177 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:23:19,177 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:23:19,182 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:23:19,183 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:23:19,184 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:23:19,184 - linkedin_sourcing_agent.cli.main - [32mINFO[0m - main.py:159 - Configuration loaded from .env
+2025-06-30 18:23:28,877 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:23:30,475 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:23:30,476 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:23:40,662 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:23:42,505 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:23:42,505 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:23:42,516 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:23:42,518 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:23:42,518 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:23:42,519 - linkedin_sourcing_agent.cli.main - [32mINFO[0m - main.py:159 - Configuration loaded from .env
+2025-06-30 18:23:42,519 - linkedin_sourcing_agent.cli.main - [32mINFO[0m - main.py:199 - Searching for candidates: python developer machine learning
+2025-06-30 18:23:42,519 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:23:42,521 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:23:42,522 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:23:42,578 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:23:42,578 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:23:42,629 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:23:42,630 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:23:42,631 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:23:42,631 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:23:42,631 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:23:42,632 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:23:42,632 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:23:42,632 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:23:42,633 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:23:42,633 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:23:42,634 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:23:42,634 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:23:42,634 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='python developer machine learning', location='San Francisco', limit=5
+2025-06-30 18:23:42,789 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 18:23:42,790 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 5 demo candidates for query: 'python developer machine learning San Francisco'
+2025-06-30 18:23:42,791 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 5 demo candidates
+2025-06-30 18:23:42,791 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 5 candidates for query: 'python developer machine learning San Francisco' (Demo: True)
+2025-06-30 18:23:42,793 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 5 candidates
+2025-06-30 18:23:42,793 - linkedin_sourcing_agent.cli.main - [32mINFO[0m - main.py:214 - Found 5 candidates
+2025-06-30 18:23:42,795 - linkedin_sourcing_agent.utils.export_manager - [33mWARNING[0m - export_manager.py:70 - Google service account file not found: service_account.json
+2025-06-30 18:23:42,796 - linkedin_sourcing_agent.cli.main - [32mINFO[0m - main.py:548 - Saving results to: outputs/json_data\search_python_developer_machine_learning_20250630_182342.json
+2025-06-30 18:23:44,189 - linkedin_sourcing_agent.utils.export_manager - [32mINFO[0m - export_manager.py:505 - Applied formatting to outputs/excel_exports\search_python_developer_machine_learning_20250630_182342.xlsx
+2025-06-30 18:23:44,189 - linkedin_sourcing_agent.utils.export_manager - [32mINFO[0m - export_manager.py:135 - Successfully exported 5 candidates to outputs/excel_exports\search_python_developer_machine_learning_20250630_182342.xlsx
+2025-06-30 18:24:51,296 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:24:51,818 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs\linkedin_agent_20250630.log
+2025-06-30 18:24:51,856 - api_server - [32mINFO[0m - api_server.py:82 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:24:51,856 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-06-30 18:24:51,858 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:24:51,858 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:24:51,897 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:24:51,897 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-06-30 18:24:51,927 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-06-30 18:24:51,928 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:24:51,929 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-06-30 18:24:51,929 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-06-30 18:24:51,929 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-06-30 18:24:51,929 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-06-30 18:24:51,930 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:24:51,930 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-06-30 18:24:51,930 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:24:51,930 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:24:51,931 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-06-30 18:24:51,931 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:24:51,932 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-06-30 18:24:51,932 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-06-30 18:24:51,933 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-06-30 18:24:51,933 - linkedin_sourcing_agent.generators.outreach_generator - [33mWARNING[0m - outreach_generator.py:111 - OpenAI API key not found. Falling back to templates.
+2025-06-30 18:24:51,933 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-06-30 18:24:51,934 - api_server - [32mINFO[0m - api_server.py:85 - LinkedIn Sourcing Agent initialized successfully
+2025-06-30 18:25:49,629 - api_server - [32mINFO[0m - api_server.py:133 - Processing job request: job_1751304349
+2025-06-30 18:25:49,630 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='engineer developer python machine learning ai', location='Mountain View', limit=10
+2025-06-30 18:25:49,767 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-06-30 18:25:49,768 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 10 demo candidates for query: 'engineer developer python machine learning ai Mountain View'
+2025-06-30 18:25:49,768 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 6 demo candidates
+2025-06-30 18:25:49,769 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 6 candidates for query: 'engineer developer python machine learning ai Mountain View' (Demo: True)
+2025-06-30 18:25:49,770 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 6 candidates
+2025-06-30 18:25:49,771 - api_server - [32mINFO[0m - api_server.py:143 - Found 6 candidates for job job_1751304349
+2025-06-30 18:25:49,773 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Sarah Chen: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,774 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,775 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Dr. Priya Patel: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,775 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,776 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Marcus Rodriguez: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,776 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,776 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Alex Kim: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,776 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,777 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:252 - Message generation failed for Emma Thompson: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,777 - linkedin_sourcing_agent.generators.outreach_generator - [31mERROR[0m - outreach_generator.py:692 - Creating fallback message due to error: 'RateLimiter' object has no attribute 'acquire'
+2025-06-30 18:25:49,778 - api_server - [32mINFO[0m - api_server.py:212 - Successfully processed job 
+    Software Engine in 0.15s

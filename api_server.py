@@ -50,25 +50,25 @@ class JobRequest(BaseModel):
     max_candidates: int = Field(10, description="Maximum number of candidates to return", ge=1, le=50)
     include_outreach: bool = Field(True, description="Whether to generate outreach messages")
     
+class ScoreBreakdown(BaseModel):
+    education: float = Field(..., description="Education score (0-10)")
+    trajectory: float = Field(..., description="Career trajectory score (0-10)")
+    company: float = Field(..., description="Company quality score (0-10)")
+    skills: float = Field(..., description="Technical skills score (0-10)")
+    location: float = Field(..., description="Location match score (0-10)")
+    tenure: float = Field(..., description="Job tenure stability score (0-10)")
+
 class CandidateResponse(BaseModel):
     name: str
     linkedin_url: str
-    headline: str
-    location: str
     fit_score: float
-    score_breakdown: Dict[str, float]
-    confidence: str
-    key_characteristics: List[str]
-    job_match_reasons: List[str]
-    outreach_message: Optional[str] = None
-    
+    score_breakdown: ScoreBreakdown
+    outreach_message: str
+
 class SourcingResponse(BaseModel):
     job_id: str
     candidates_found: int
-    processing_time_seconds: float
     top_candidates: List[CandidateResponse]
-    search_query_used: str
-    timestamp: str
 
 # Global agent instance
 agent = None
@@ -178,36 +178,38 @@ async def source_candidates(request: JobRequest):
                     candidate['message_confidence'] = message_result.get('confidence', 'medium')
                 except Exception as e:
                     logger.warning(f"Failed to generate outreach for {candidate.get('name', 'Unknown')}: {str(e)}")
-                    candidate['outreach_message'] = "Custom outreach message generation failed"
+                    candidate['outreach_message'] = _generate_fallback_message(candidate, request.job_description)
         
-        # Step 5: Format response
+        # Step 5: Format response to match desired structure
         formatted_candidates = []
         for candidate in top_candidates:
+            # Create detailed score breakdown
+            score_breakdown = ScoreBreakdown(
+                education=_calculate_education_score(candidate),
+                trajectory=_calculate_trajectory_score(candidate),
+                company=_calculate_company_score(candidate),
+                skills=_calculate_skills_score(candidate, request.job_description),
+                location=_calculate_location_score(candidate, request.location),
+                tenure=_calculate_tenure_score(candidate)
+            )
+            
             formatted_candidates.append(CandidateResponse(
                 name=candidate.get('name', 'Unknown'),
-                linkedin_url=candidate.get('linkedin_url', ''),
-                headline=candidate.get('headline', ''),
-                location=candidate.get('location', ''),
-                fit_score=candidate.get('fit_score', 0.0),
-                score_breakdown=candidate.get('score_breakdown', {}),
-                confidence=candidate.get('confidence', 'medium'),
-                key_characteristics=_extract_key_characteristics(candidate),
-                job_match_reasons=_extract_job_match_reasons(candidate, request.job_description),
-                outreach_message=candidate.get('outreach_message') if request.include_outreach else None
+                linkedin_url=candidate.get('linkedin_url', candidate.get('profile_url', '')),
+                fit_score=round(candidate.get('fit_score', 0.0), 1),
+                score_breakdown=score_breakdown,
+                outreach_message=candidate.get('outreach_message', f"Hi {candidate.get('name', 'there')}, I noticed your background...")
             ))
-        
+
         processing_time = (datetime.now() - start_time).total_seconds()
         
         response = SourcingResponse(
-            job_id=job_id,
+            job_id=request.job_description[:20].replace(' ', '-').lower() + f"-{int(start_time.timestamp())}",
             candidates_found=len(candidates),
-            processing_time_seconds=round(processing_time, 2),
-            top_candidates=formatted_candidates,
-            search_query_used=search_query,
-            timestamp=start_time.isoformat()
+            top_candidates=formatted_candidates
         )
         
-        logger.info(f"Successfully processed job {job_id} in {processing_time:.2f}s")
+        logger.info(f"Successfully processed job {request.job_description[:20]} in {processing_time:.2f}s")
         return response
         
     except Exception as e:
@@ -309,6 +311,177 @@ def _extract_job_match_reasons(candidate: Dict[str, Any], job_description: str) 
         reasons.append('Ideal location match')
     
     return reasons[:5]  # Top 5 reasons
+
+def _calculate_education_score(candidate: Dict[str, Any]) -> float:
+    """Calculate education score (0-10)"""
+    education = candidate.get('education', [])
+    if not education:
+        return 5.0
+    
+    score = 5.0
+    for edu in education:
+        if isinstance(edu, dict):
+            school = edu.get('school', '').lower()
+            degree = edu.get('degree', '').lower()
+            
+            # Elite universities
+            if any(elite in school for elite in ['mit', 'stanford', 'harvard', 'berkeley', 'carnegie mellon']):
+                score += 2.0
+            elif any(good in school for good in ['university', 'college']):
+                score += 1.0
+            
+            # Advanced degrees
+            if any(advanced in degree for advanced in ['phd', 'ms', 'master', 'mba']):
+                score += 1.5
+            elif 'bs' in degree or 'bachelor' in degree:
+                score += 1.0
+    
+    return min(score, 10.0)
+
+def _calculate_trajectory_score(candidate: Dict[str, Any]) -> float:
+    """Calculate career trajectory score (0-10)"""
+    headline = candidate.get('headline', '').lower()
+    experience = candidate.get('experience', [])
+    
+    score = 5.0
+    
+    # Seniority indicators
+    if 'senior' in headline:
+        score += 1.5
+    elif 'lead' in headline or 'principal' in headline:
+        score += 2.0
+    elif 'director' in headline or 'vp' in headline:
+        score += 2.5
+    
+    # Career progression
+    if len(experience) >= 3:
+        score += 1.0
+    if len(experience) >= 5:
+        score += 1.0
+    
+    return min(score, 10.0)
+
+def _calculate_company_score(candidate: Dict[str, Any]) -> float:
+    """Calculate company quality score (0-10)"""
+    headline = candidate.get('headline', '').lower()
+    experience = candidate.get('experience', [])
+    
+    score = 5.0
+    
+    # Extract company from headline or experience
+    companies = []
+    if ' at ' in headline:
+        companies.append(headline.split(' at ')[1].split('•')[0].strip())
+    
+    for exp in experience:
+        if isinstance(exp, dict):
+            companies.append(exp.get('company', '').lower())
+    
+    # Rate companies
+    for company in companies:
+        if any(faang in company for faang in ['google', 'apple', 'microsoft', 'meta', 'amazon']):
+            score += 2.0
+            break
+        elif any(unicorn in company for unicorn in ['uber', 'airbnb', 'stripe', 'openai', 'netflix']):
+            score += 1.5
+            break
+        elif any(startup in company for startup in ['startup', 'inc', 'corp']):
+            score += 0.5
+    
+    return min(score, 10.0)
+
+def _calculate_skills_score(candidate: Dict[str, Any], job_description: str) -> float:
+    """Calculate technical skills score (0-10)"""
+    skills = candidate.get('skills', [])
+    headline = candidate.get('headline', '').lower()
+    job_desc = job_description.lower()
+    
+    score = 5.0
+    
+    # Create combined skills text
+    skills_text = ' '.join(skills).lower() + ' ' + headline
+    
+    # Key technology matches
+    tech_matches = 0
+    key_techs = ['python', 'javascript', 'java', 'react', 'node', 'aws', 'docker', 'kubernetes', 
+                'machine learning', 'ai', 'tensorflow', 'pytorch', 'sql', 'postgresql']
+    
+    for tech in key_techs:
+        if tech in skills_text and tech in job_desc:
+            tech_matches += 1
+    
+    score += min(tech_matches * 0.5, 3.0)
+    
+    # Overall skill count
+    if len(skills) >= 10:
+        score += 1.0
+    elif len(skills) >= 5:
+        score += 0.5
+    
+    return min(score, 10.0)
+
+def _calculate_location_score(candidate: Dict[str, Any], requested_location: Optional[str]) -> float:
+    """Calculate location match score (0-10)"""
+    if not requested_location:
+        return 8.0  # Neutral if no location specified
+    
+    candidate_location = candidate.get('location', '').lower()
+    requested_location = requested_location.lower()
+    
+    # Exact match
+    if requested_location in candidate_location:
+        return 10.0
+    
+    # Same city (different format)
+    location_parts = candidate_location.split(',')
+    if location_parts and requested_location in location_parts[0]:
+        return 10.0
+    
+    # Same state/region
+    if any(region in candidate_location for region in ['california', 'ca', 'bay area', 'silicon valley']):
+        if any(region in requested_location for region in ['california', 'ca', 'san francisco', 'bay area']):
+            return 8.0
+    
+    # Remote-friendly locations
+    if 'remote' in candidate_location or 'remote' in requested_location:
+        return 7.0
+    
+    return 4.0  # Different location
+
+def _calculate_tenure_score(candidate: Dict[str, Any]) -> float:
+    """Calculate job tenure stability score (0-10)"""
+    experience = candidate.get('experience', [])
+    
+    if not experience:
+        return 5.0
+    
+    score = 5.0
+    total_positions = len(experience)
+    
+    # Calculate average tenure (rough estimation)
+    long_tenures = 0
+    for exp in experience:
+        if isinstance(exp, dict):
+            duration = exp.get('duration', '').lower()
+            # Look for year indicators
+            if 'year' in duration:
+                try:
+                    years = int(duration.split('year')[0].strip().split()[-1])
+                    if years >= 2:
+                        long_tenures += 1
+                except:
+                    pass
+    
+    # Reward stability
+    if total_positions > 0:
+        stability_ratio = long_tenures / total_positions
+        score += stability_ratio * 3.0
+    
+    # Penalize job hopping
+    if total_positions > 6:
+        score -= 1.0
+    
+    return max(min(score, 10.0), 0.0)
 
 @app.get("/demo")
 async def demo_endpoint():

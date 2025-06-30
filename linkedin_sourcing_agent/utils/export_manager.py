@@ -325,23 +325,26 @@ class ExportManager:
         """Prepare generated messages dataframe."""
         data = []
         for candidate in candidates:
+            # Check both possible message fields
             messages = candidate.get('generated_messages', [])
+            outreach_message = candidate.get('outreach_message', '')
             
-            if not messages:
-                # Create empty row if no messages
+            if outreach_message:
+                # Handle direct outreach_message field
                 row = {
                     'Name': candidate.get('name', ''),
-                    'Message_Type': '',
-                    'Message_Content': '',
-                    'Generation_Method': '',
-                    'Personalization_Score': 0,
-                    'Confidence': '',
-                    'Generated_Date': '',
-                    'Template_Used': '',
-                    'Character_Count': 0
+                    'Message_Type': 'LinkedIn Outreach',
+                    'Message_Content': outreach_message,
+                    'Generation_Method': candidate.get('generation_method', 'Template'),
+                    'Personalization_Score': candidate.get('personalization_score', 3),
+                    'Confidence': candidate.get('confidence', 'Medium'),
+                    'Generated_Date': candidate.get('scoring_timestamp', datetime.now().strftime('%Y-%m-%d %H:%M:%S')),
+                    'Template_Used': candidate.get('template_used', 'professional_outreach'),
+                    'Character_Count': len(outreach_message)
                 }
                 data.append(row)
-            else:
+            elif messages:
+                # Handle structured messages array
                 for message in messages:
                     row = {
                         'Name': candidate.get('name', ''),
@@ -355,6 +358,20 @@ class ExportManager:
                         'Character_Count': len(message.get('message', ''))
                     }
                     data.append(row)
+            else:
+                # Create empty row if no messages
+                row = {
+                    'Name': candidate.get('name', ''),
+                    'Message_Type': 'No Message Generated',
+                    'Message_Content': 'No outreach message available',
+                    'Generation_Method': 'None',
+                    'Personalization_Score': 0,
+                    'Confidence': 'N/A',
+                    'Generated_Date': '',
+                    'Template_Used': 'None',
+                    'Character_Count': 0
+                }
+                data.append(row)
         
         return pd.DataFrame(data)
     

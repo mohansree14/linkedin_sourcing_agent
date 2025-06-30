@@ -1,0 +1,123 @@
+[
+  {
+    "name": "David Park",
+    "headline": "DevOps Engineer at Netflix • Kubernetes & Cloud Expert",
+    "location": "Los Angeles, CA",
+    "snippet": "DevOps engineer managing infrastructure for 200M+ Netflix users. Expert in Kubernetes, AWS, and site reliability.",
+    "profile_url": "https://linkedin.com/in/david-park-devops",
+    "image_url": "https://example.com/avatar6.jpg",
+    "experience": [
+      {
+        "title": "Senior DevOps Engineer",
+        "company": "Netflix",
+        "duration": "2021 - Present",
+        "description": "Manage global streaming infrastructure, 99.99% uptime"
+      },
+      {
+        "title": "Cloud Engineer",
+        "company": "Spotify",
+        "duration": "2019 - 2021",
+        "description": "Built music streaming infrastructure on AWS"
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS Information Systems",
+        "school": "UCLA",
+        "year": "2019"
+      }
+    ],
+    "skills": [
+      "Kubernetes",
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Python",
+      "Go"
+    ],
+    "certifications": [
+      "AWS Solutions Architect Professional",
+      "Certified Kubernetes Administrator (CKA)",
+      "HashiCorp Terraform Associate"
+    ],
+    "relevance_score": 0.2,
+    "search_rank": 1,
+    "search_query": "Senior Python Developer San Francisco",
+    "search_timestamp": "2025-06-30T17:52:01.017099",
+    "data_source": "demo_generator",
+    "confidence_score": 0.7073921159536606,
+    "linkedin_url": "https://linkedin.com/in/david-park-devops",
+    "is_demo_data": true,
+    "demo_notice": "This is demo data. Add API keys for real LinkedIn data.",
+    "fit_score": 3.1666666666666665,
+    "insights": [
+      "💭 Potential candidate - Some relevant skills, may need development",
+      "🏢 Top-tier company experience - Proven ability to work at scale"
+    ],
+    "scoring_timestamp": "2025-06-30T17:52:01.017922",
+    "scoring_method": "demo_algorithm"
+  },
+  {
+    "name": "Alex Kim",
+    "headline": "Engineering Manager at Stripe • Building Payment Infrastructure",
+    "location": "Seattle, WA",
+    "snippet": "Engineering leader with 10+ years experience. Currently managing 15+ engineers building global payment systems.",
+    "profile_url": "https://linkedin.com/in/alex-kim-stripe",
+    "image_url": "https://example.com/avatar4.jpg",
+    "experience": [
+      {
+        "title": "Engineering Manager",
+        "company": "Stripe",
+        "duration": "2021 - Present",
+        "description": "Manage payments infrastructure team, lead 15+ engineers"
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Airbnb",
+        "duration": "2018 - 2021",
+        "description": "Built booking and payments systems handling $50B+ annually"
+      }
+    ],
+    "education": [
+      {
+        "degree": "MS Software Engineering",
+        "school": "Carnegie Mellon University",
+        "year": "2018"
+      }
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "Leadership",
+      "System Design",
+      "PostgreSQL",
+      "Kafka"
+    ],
+    "github_profile": {
+      "username": "alex-kim-eng",
+      "public_repos": 34,
+      "followers": 567,
+      "top_languages": [
+        "Java",
+        "Python",
+        "Go"
+      ]
+    },
+    "relevance_score": 0.2,
+    "search_rank": 2,
+    "search_query": "Senior Python Developer San Francisco",
+    "search_timestamp": "2025-06-30T17:52:01.017121",
+    "data_source": "demo_generator",
+    "confidence_score": 0.7110439403931783,
+    "linkedin_url": "https://linkedin.com/in/alex-kim-stripe",
+    "is_demo_data": true,
+    "demo_notice": "This is demo data. Add API keys for real LinkedIn data.",
+    "fit_score": 3.6666666666666665,
+    "insights": [
+      "💭 Potential candidate - Some relevant skills, may need development",
+      "💻 Active open-source contributor - Strong technical engagement"
+    ],
+    "scoring_timestamp": "2025-06-30T17:52:01.017955",
+    "scoring_method": "demo_algorithm"
+  }
+]
