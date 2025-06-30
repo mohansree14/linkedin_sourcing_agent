@@ -1,0 +1,277 @@
+[
+  {
+    "name": "David Park",
+    "headline": "DevOps Engineer at Netflix • Kubernetes & Cloud Expert",
+    "location": "Los Angeles, CA",
+    "snippet": "DevOps engineer managing infrastructure for 200M+ Netflix users. Expert in Kubernetes, AWS, and site reliability.",
+    "profile_url": "https://linkedin.com/in/david-park-devops",
+    "image_url": "https://example.com/avatar6.jpg",
+    "experience": [
+      {
+        "title": "Senior DevOps Engineer",
+        "company": "Netflix",
+        "duration": "2021 - Present",
+        "description": "Manage global streaming infrastructure, 99.99% uptime"
+      },
+      {
+        "title": "Cloud Engineer",
+        "company": "Spotify",
+        "duration": "2019 - 2021",
+        "description": "Built music streaming infrastructure on AWS"
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS Information Systems",
+        "school": "UCLA",
+        "year": "2019"
+      }
+    ],
+    "skills": [
+      "Kubernetes",
+      "AWS",
+      "Docker",
+      "Terraform",
+      "Python",
+      "Go"
+    ],
+    "certifications": [
+      "AWS Solutions Architect Professional",
+      "Certified Kubernetes Administrator (CKA)",
+      "HashiCorp Terraform Associate"
+    ],
+    "relevance_score": 0.2,
+    "search_rank": 1,
+    "search_query": "Machine Learning Engineer San Francisco",
+    "search_timestamp": "2025-06-30T15:19:09.626174",
+    "data_source": "demo_generator",
+    "confidence_score": 0.8375484989135379,
+    "is_demo_data": true,
+    "demo_notice": "This is demo data. Add API keys for real LinkedIn data.",
+    "fit_score": 3.1666666666666665,
+    "insights": [
+      "💭 Potential candidate - Some relevant skills, may need development",
+      "🏢 Top-tier company experience - Proven ability to work at scale"
+    ],
+    "scoring_timestamp": "2025-06-30T15:19:09.627043",
+    "scoring_method": "demo_algorithm"
+  },
+  {
+    "name": "Alex Kim",
+    "headline": "Engineering Manager at Stripe • Building Payment Infrastructure",
+    "location": "Seattle, WA",
+    "snippet": "Engineering leader with 10+ years experience. Currently managing 15+ engineers building global payment systems.",
+    "profile_url": "https://linkedin.com/in/alex-kim-stripe",
+    "image_url": "https://example.com/avatar4.jpg",
+    "experience": [
+      {
+        "title": "Engineering Manager",
+        "company": "Stripe",
+        "duration": "2021 - Present",
+        "description": "Manage payments infrastructure team, lead 15+ engineers"
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Airbnb",
+        "duration": "2018 - 2021",
+        "description": "Built booking and payments systems handling $50B+ annually"
+      }
+    ],
+    "education": [
+      {
+        "degree": "MS Software Engineering",
+        "school": "Carnegie Mellon University",
+        "year": "2018"
+      }
+    ],
+    "skills": [
+      "Python",
+      "Java",
+      "Leadership",
+      "System Design",
+      "PostgreSQL",
+      "Kafka"
+    ],
+    "github_profile": {
+      "username": "alex-kim-eng",
+      "public_repos": 34,
+      "followers": 567,
+      "top_languages": [
+        "Java",
+        "Python",
+        "Go"
+      ]
+    },
+    "relevance_score": 0.2,
+    "search_rank": 2,
+    "search_query": "Machine Learning Engineer San Francisco",
+    "search_timestamp": "2025-06-30T15:19:09.626188",
+    "data_source": "demo_generator",
+    "confidence_score": 0.8434427365368454,
+    "is_demo_data": true,
+    "demo_notice": "This is demo data. Add API keys for real LinkedIn data.",
+    "fit_score": 3.6666666666666665,
+    "insights": [
+      "💭 Potential candidate - Some relevant skills, may need development",
+      "💻 Active open-source contributor - Strong technical engagement"
+    ],
+    "scoring_timestamp": "2025-06-30T15:19:09.627081",
+    "scoring_method": "demo_algorithm"
+  },
+  {
+    "name": "Sarah Chen",
+    "headline": "Senior Machine Learning Engineer at Google",
+    "location": "Mountain View, CA",
+    "snippet": "ML engineer with 8+ years building production ML systems. Led teams developing recommendation engines and NLP models.",
+    "profile_url": "https://linkedin.com/in/sarah-chen-ml",
+    "image_url": "https://example.com/avatar1.jpg",
+    "experience": [
+      {
+        "title": "Senior ML Engineer",
+        "company": "Google",
+        "duration": "2021 - Present",
+        "description": "Lead ML infrastructure team, built recommendation systems serving 1B+ users"
+      },
+      {
+        "title": "ML Engineer",
+        "company": "Uber",
+        "duration": "2019 - 2021",
+        "description": "Developed fraud detection models, improved accuracy by 25%"
+      }
+    ],
+    "education": [
+      {
+        "degree": "MS Computer Science",
+        "school": "Stanford University",
+        "year": "2019"
+      }
+    ],
+    "skills": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLOps",
+      "Kubernetes",
+      "GCP"
+    ],
+    "github_profile": {
+      "username": "sarah-chen-ml",
+      "public_repos": 45,
+      "followers": 1200,
+      "top_languages": [
+        "Python",
+        "Jupyter Notebook",
+        "Go"
+      ],
+      "notable_repos": [
+        {
+          "name": "ml-pipeline-tools",
+          "stars": 890,
+          "description": "Production ML pipeline utilities"
+        },
+        {
+          "name": "pytorch-examples",
+          "stars": 234,
+          "description": "PyTorch learning examples"
+        }
+      ]
+    },
+    "twitter_profile": {
+      "username": "sarahchen_ml",
+      "followers": 5600,
+      "bio": "ML Engineer @Google • Building AI systems that matter • Thoughts on ML in production"
+    },
+    "relevance_score": 0.6,
+    "search_rank": 3,
+    "search_query": "Machine Learning Engineer San Francisco",
+    "search_timestamp": "2025-06-30T15:19:09.626193",
+    "data_source": "demo_generator",
+    "confidence_score": 0.8225991487656885,
+    "is_demo_data": true,
+    "demo_notice": "This is demo data. Add API keys for real LinkedIn data.",
+    "fit_score": 6.5,
+    "insights": [
+      "✅ Good fit - Solid background with relevant experience",
+      "🤖 Direct ML experience - Perfect for ML research role",
+      "🔧 Strong ML framework experience (PyTorch/TensorFlow)",
+      "💻 Active open-source contributor - Strong technical engagement"
+    ],
+    "scoring_timestamp": "2025-06-30T15:19:09.627100",
+    "scoring_method": "demo_algorithm"
+  },
+  {
+    "name": "Marcus Rodriguez",
+    "headline": "Staff Software Engineer at Meta • Ex-Netflix",
+    "location": "San Francisco, CA",
+    "snippet": "Full-stack engineer specializing in scalable systems. Built infrastructure serving 500M+ users.",
+    "profile_url": "https://linkedin.com/in/marcus-rodriguez",
+    "image_url": "https://example.com/avatar2.jpg",
+    "experience": [
+      {
+        "title": "Staff Software Engineer",
+        "company": "Meta",
+        "duration": "2022 - Present",
+        "description": "Lead Instagram backend infrastructure, reduced latency by 40%"
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Netflix",
+        "duration": "2020 - 2022",
+        "description": "Built video streaming infrastructure, handled 200M concurrent users"
+      }
+    ],
+    "education": [
+      {
+        "degree": "BS Computer Engineering",
+        "school": "UC Berkeley",
+        "year": "2018"
+      }
+    ],
+    "skills": [
+      "Python",
+      "Go",
+      "React",
+      "PostgreSQL",
+      "Kubernetes",
+      "AWS"
+    ],
+    "github_profile": {
+      "username": "marcus-dev",
+      "public_repos": 67,
+      "followers": 890,
+      "top_languages": [
+        "Go",
+        "Python",
+        "JavaScript"
+      ],
+      "notable_repos": [
+        {
+          "name": "distributed-cache",
+          "stars": 1200,
+          "description": "High-performance distributed caching system"
+        },
+        {
+          "name": "microservices-toolkit",
+          "stars": 445,
+          "description": "Toolkit for building microservices"
+        }
+      ]
+    },
+    "relevance_score": 0.2,
+    "search_rank": 4,
+    "search_query": "Machine Learning Engineer San Francisco",
+    "search_timestamp": "2025-06-30T15:19:09.626195",
+    "data_source": "demo_generator",
+    "confidence_score": 0.7760725529377624,
+    "is_demo_data": true,
+    "demo_notice": "This is demo data. Add API keys for real LinkedIn data.",
+    "fit_score": 5.166666666666666,
+    "insights": [
+      "💭 Potential candidate - Some relevant skills, may need development",
+      "💻 Active open-source contributor - Strong technical engagement",
+      "🏢 Top-tier company experience - Proven ability to work at scale"
+    ],
+    "scoring_timestamp": "2025-06-30T15:19:09.627119",
+    "scoring_method": "demo_algorithm"
+  }
+]
