@@ -1,0 +1,58 @@
+# LinkedIn Sourcing Agent - Requirements
+# ========================================
+
+# Core dependencies
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+selenium>=4.15.0
+fake-useragent>=1.4.0
+
+# Data processing and export
+pandas>=2.0.0
+openpyxl>=3.1.0
+xlsxwriter>=3.1.0
+
+# Google services
+google-auth>=2.23.0
+google-auth-oauthlib>=1.0.0
+google-auth-httplib2>=0.1.0
+gspread>=5.10.0
+
+# AI and ML
+openai>=1.3.0
+google-generativeai>=0.3.0
+
+# Optional: Transformers for open source models
+# transformers>=4.35.0
+# torch>=2.1.0
+# accelerate>=0.24.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0
+black>=23.9.0
+flake8>=6.1.0
+mypy>=1.6.0
+
+# Utilities
+python-dotenv>=1.0.0
+colorama>=0.4.6
+tqdm>=4.66.0
+click>=8.1.0
+rich>=13.6.0
+pydantic>=2.4.0
+aiohttp>=3.8.0
+asyncio-throttle>=1.0.0
+
+# Selenium drivers (optional)
+webdriver-manager>=4.0.0
+
+# Optional: Database support
+# sqlalchemy>=2.0.0
+# sqlite3  # Built-in with Python
+
+# Optional: Advanced NLP
+# spacy>=3.7.0
+# nltk>=3.8.0
