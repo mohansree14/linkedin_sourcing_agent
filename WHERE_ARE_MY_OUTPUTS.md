@@ -2,8 +2,7 @@
 
 ## 📍 **Where to Find Your Results**
 
-### **Main Output Directory**: `c:\Users\mohan\Desktop\AL\outputs\`
-
+### **Main Output Directory**
 ```
 outputs/
 ├── 🔍 search_results/        # LinkedIn search results (JSON)
@@ -12,7 +11,7 @@ outputs/
 └── 📝 json_data/            # Raw data & backups
 ```
 
-### **Log Files**: `c:\Users\mohan\Desktop\AL\logs\`
+### **Log Files**: `
 - `linkedin_agent_20250630.log` - Application logs & errors
 
 ---
