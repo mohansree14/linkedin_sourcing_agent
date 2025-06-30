@@ -74,6 +74,19 @@ if 'candidates' not in st.session_state:
     st.session_state.candidates = []
 if 'search_history' not in st.session_state:
     st.session_state.search_history = []
+if 'agent_initialized' not in st.session_state:
+    st.session_state.agent_initialized = False
+
+# Auto-initialize agent on first load
+if not st.session_state.agent_initialized:
+    try:
+        with st.spinner("Initializing LinkedIn Sourcing Agent..."):
+            st.session_state.agent = LinkedInSourcingAgent()
+            st.session_state.agent_initialized = True
+        st.success("✅ Agent initialized successfully!")
+    except Exception as e:
+        st.error(f"Failed to auto-initialize agent: {str(e)}")
+        st.info("Please manually initialize the agent using the sidebar button.")
 
 # Header
 st.markdown('<h1 class="main-header">🎯 LinkedIn Sourcing Agent</h1>', unsafe_allow_html=True)
