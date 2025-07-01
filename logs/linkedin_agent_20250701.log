@@ -153,3 +153,8 @@ Type: Contract
 Length: 6 mo United Kingdom' (Demo: True)
 2025-07-01 14:34:09,170 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 3 candidates
 2025-07-01 14:34:09,248 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 15:32:49,126 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 15:33:00,518 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 15:34:48,014 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 15:35:17,297 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 15:36:10,396 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log

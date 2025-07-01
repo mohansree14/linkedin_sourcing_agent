@@ -19,8 +19,8 @@ import sys
 import os
 import subprocess
 
-# For Streamlit Cloud deployment, use demo mode by default
-DEMO_MODE = True  # Set to True for Streamlit Cloud deployment
+# For Streamlit Cloud deployment, try to use real model first, fallback to demo
+DEMO_MODE = False  # Set to True to force demo mode, False to try real model first
 
 # Try importing the package only if not in demo mode
 LinkedInSourcingAgent = None
@@ -29,14 +29,20 @@ setup_logging = None
 import_success = False
 
 if not DEMO_MODE:
-    # Try to import the actual package (for local development)
+    # Try to import the actual package (for local development and cloud deployment)
     try:
         from linkedin_sourcing_agent.core.agent import LinkedInSourcingAgent
         from linkedin_sourcing_agent.generators.outreach_generator import OutreachGenerator
         from linkedin_sourcing_agent.utils.logging_config import setup_logging
         import_success = True
         st.success("✅ LinkedIn Sourcing Agent package loaded successfully!")
-    except ImportError:
+    except ImportError as e:
+        st.warning(f"⚠️ Could not import LinkedIn Sourcing Agent package: {str(e)}")
+        st.info("🔄 Falling back to Demo Mode with realistic sample data")
+        DEMO_MODE = True
+    except Exception as e:
+        st.error(f"❌ Error loading LinkedIn Sourcing Agent package: {str(e)}")
+        st.info("🔄 Falling back to Demo Mode with realistic sample data")
         DEMO_MODE = True
 
 if DEMO_MODE or not import_success:
@@ -50,22 +56,54 @@ if DEMO_MODE or not import_success:
             pass
         
         async def search_candidates(self, query, location=None, limit=10):
-            # Return demo candidates
+            # Return demo candidates with diverse, realistic data
             demo_candidates = []
-            companies = ['Google', 'Microsoft', 'Apple', 'Amazon', 'Meta', 'Netflix', 'Tesla', 'Uber', 'Airbnb', 'Spotify']
-            locations = ['San Francisco, CA', 'New York, NY', 'Seattle, WA', 'Austin, TX', 'Boston, MA', 'Chicago, IL']
-            skills_pool = ['Python', 'JavaScript', 'React', 'Node.js', 'AWS', 'Docker', 'Kubernetes', 'Machine Learning', 'Data Science', 'SQL', 'MongoDB', 'Redis', 'GraphQL', 'TypeScript']
+            companies = ['Google', 'Microsoft', 'Apple', 'Amazon', 'Meta', 'Netflix', 'Tesla', 'Uber', 'Airbnb', 'Spotify', 'Stripe', 'Square', 'Dropbox', 'Slack', 'Zoom']
+            default_locations = ['San Francisco, CA', 'New York, NY', 'Seattle, WA', 'Austin, TX', 'Boston, MA', 'Chicago, IL', 'Los Angeles, CA', 'Denver, CO', 'Remote']
+            skills_pool = ['Python', 'JavaScript', 'React', 'Node.js', 'AWS', 'Docker', 'Kubernetes', 'Machine Learning', 'Data Science', 'SQL', 'MongoDB', 'Redis', 'GraphQL', 'TypeScript', 'Go', 'Rust', 'PostgreSQL', 'TensorFlow', 'PyTorch']
             
-            for i in range(min(limit, 10)):
+            # Diverse names for realistic demo data
+            first_names = ['Sarah', 'Michael', 'Emily', 'David', 'Jessica', 'Christopher', 'Amanda', 'Daniel', 'Ashley', 'Matthew', 'Jennifer', 'Andrew', 'Emma', 'Joshua', 'Madison', 'Ryan', 'Olivia', 'James', 'Sophia', 'William']
+            last_names = ['Chen', 'Rodriguez', 'Kim', 'Johnson', 'Williams', 'Brown', 'Davis', 'Miller', 'Wilson', 'Moore', 'Taylor', 'Anderson', 'Thomas', 'Jackson', 'White', 'Harris', 'Martin', 'Thompson', 'Garcia', 'Martinez']
+            
+            # Job titles based on query
+            job_titles = [
+                f'Senior {query.split()[0] if query else "Software"} Engineer',
+                f'{query.split()[0] if query else "Software"} Engineer',
+                f'Lead {query.split()[0] if query else "Software"} Developer',
+                f'Principal {query.split()[0] if query else "Software"} Engineer',
+                f'Staff {query.split()[0] if query else "Software"} Engineer'
+            ]
+            
+            education_options = [
+                'BS Computer Science - Stanford University',
+                'MS Software Engineering - MIT',
+                'BS Information Technology - UC Berkeley',
+                'PhD Computer Science - Carnegie Mellon',
+                'MS Computer Science - Georgia Tech',
+                'BS Software Engineering - University of Washington',
+                'MS Data Science - Columbia University',
+                'BS Computer Engineering - Caltech'
+            ]
+            
+            for i in range(min(limit, 20)):  # Allow up to 20 candidates
+                # Generate unique combinations
+                first_name = random.choice(first_names)
+                last_name = random.choice(last_names)
+                full_name = f'{first_name} {last_name}'
+                
+                # Use provided location or pick from defaults
+                candidate_location = location or random.choice(default_locations)
+                
                 demo_candidates.append({
-                    'name': f'Alex Johnson {i+1}',
-                    'headline': f'Senior {query.split()[0] if query else "Software"} Engineer',
+                    'name': full_name,
+                    'headline': random.choice(job_titles),
                     'current_company': random.choice(companies),
-                    'location': location or random.choice(locations),
-                    'linkedin_url': f'https://linkedin.com/in/demo-user-{i+1}',
-                    'skills': random.sample(skills_pool, random.randint(5, 8)),
-                    'experience_years': random.randint(3, 15),
-                    'education': random.choice(['BS Computer Science - Stanford', 'MS Software Engineering - MIT', 'BS Information Technology - UC Berkeley', 'PhD Computer Science - Carnegie Mellon'])
+                    'location': candidate_location,
+                    'linkedin_url': f'https://linkedin.com/in/{first_name.lower()}-{last_name.lower()}-{random.randint(100, 999)}',
+                    'skills': random.sample(skills_pool, random.randint(5, 10)),
+                    'experience_years': random.randint(2, 15),
+                    'education': random.choice(education_options)
                 })
             return demo_candidates
         
@@ -96,13 +134,15 @@ if DEMO_MODE or not import_success:
             name = candidate.get('name', 'there')
             company = candidate.get('current_company', 'your current company')
             headline = candidate.get('headline', 'professional background')
+            skills = candidate.get('skills', [])
+            top_skills = ', '.join(skills[:3]) if skills else 'your technical skills'
             
             templates = [
                 f"""Hi {name},
 
 I hope this message finds you well! I came across your profile and was impressed by your experience as a {headline} at {company}.
 
-We're currently seeking talented professionals for an exciting opportunity that aligns well with your background. Based on your expertise and experience, I believe this could be a great fit for your career growth.
+Your expertise in {top_skills} aligns perfectly with what we're looking for in our team. We're currently seeking talented professionals for an exciting opportunity that could be a great fit for your career growth.
 
 Would you be open to a brief conversation to learn more about this opportunity?
 
@@ -114,13 +154,25 @@ Senior Technical Recruiter""",
 
 Your background as a {headline} at {company} caught my attention, and I'd love to connect about a role that might interest you.
 
-We're building an innovative team and looking for someone with your skill set. The position offers excellent growth opportunities and the chance to work on cutting-edge projects.
+We're building an innovative team and looking for someone with your skill set, particularly your experience with {top_skills}. The position offers excellent growth opportunities and the chance to work on cutting-edge projects.
 
 Are you currently open to exploring new opportunities? I'd be happy to share more details.
 
 Best,
 Michael Rodriguez
-Talent Acquisition Manager"""
+Talent Acquisition Manager""",
+
+                f"""Hi {name},
+
+I hope you're doing well! I noticed your impressive work as a {headline} at {company} and wanted to reach out about an opportunity that might align with your career goals.
+
+Given your strong background in {top_skills}, I think you'd be an excellent fit for a role we're currently filling. The company culture and technical challenges would be right up your alley.
+
+Would you be interested in hearing more details? I'd love to set up a quick call.
+
+Best regards,
+Jennifer Liu
+Technical Recruiter"""
             ]
             
             message = random.choice(templates)
@@ -129,7 +181,7 @@ Talent Acquisition Manager"""
                 'message': message,
                 'confidence': random.choice(['High', 'Very High']),
                 'personalization_score': round(random.uniform(8.5, 9.8), 1),
-                'template_used': f'Professional Template {random.randint(1, 2)}',
+                'template_used': f'Professional Template {random.randint(1, 3)}',
                 'estimated_response_rate': f"{random.randint(25, 45)}%"
             }
     
