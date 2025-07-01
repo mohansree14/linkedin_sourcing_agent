@@ -1,0 +1,4 @@
+# System packages for Streamlit Cloud (if needed)
+# Add system-level dependencies here
+# Example:
+# firefox-esr

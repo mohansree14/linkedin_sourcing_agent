@@ -14,14 +14,155 @@ from typing import Dict, List, Any
 import io
 import base64
 
-# Import your LinkedIn Sourcing Agent
+# Import your LinkedIn Sourcing Agent with robust fallback
+import sys
+import os
+
+# Add the project root to Python path
+project_root = '/workspaces/linkedin_sourcing_agent'
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+# Try multiple import strategies
+LinkedInSourcingAgent = None
+OutreachGenerator = None
+setup_logging = None
+import_success = False
+
+# Strategy 1: Try direct package import
 try:
+    # First try to import retrying to ensure it's available
+    import retrying
     from linkedin_sourcing_agent.core.agent import LinkedInSourcingAgent
     from linkedin_sourcing_agent.generators.outreach_generator import OutreachGenerator
     from linkedin_sourcing_agent.utils.logging_config import setup_logging
-except ImportError:
-    st.error("LinkedIn Sourcing Agent package not found. Please install dependencies.")
-    st.stop()
+    import_success = True
+    st.success("✅ LinkedIn Sourcing Agent package loaded successfully!")
+except ImportError as e1:
+    # Strategy 2: Try installing retrying and then importing
+    try:
+        import subprocess
+        import sys
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "retrying"])
+        
+        import retrying
+        from linkedin_sourcing_agent.core.agent import LinkedInSourcingAgent
+        from linkedin_sourcing_agent.generators.outreach_generator import OutreachGenerator
+        from linkedin_sourcing_agent.utils.logging_config import setup_logging
+        import_success = True
+        st.success("✅ LinkedIn Sourcing Agent loaded after installing missing dependencies!")
+    except Exception as e2:
+        # Strategy 3: Create mock classes for demo mode
+        st.warning("⚠️ Could not load LinkedIn Sourcing Agent package. Running in demo mode with mock data.")
+        st.info(f"Import errors: Package import: {e1}")
+        if 'e2' in locals():
+            st.info(f"Auto-install attempt: {e2}")
+        
+        import random
+        
+        class MockLinkedInSourcingAgent:
+            def __init__(self):
+                pass
+            
+            async def search_candidates(self, query, location=None, limit=10):
+                # Return demo candidates
+                demo_candidates = []
+                companies = ['TechCorp', 'InnovateLab', 'DataSoft', 'AICompany', 'StartupXYZ', 'MetaSystem', 'CloudNine', 'DevTech']
+                locations = ['San Francisco, CA', 'New York, NY', 'Seattle, WA', 'Austin, TX', 'Boston, MA', 'Chicago, IL']
+                skills_pool = ['Python', 'JavaScript', 'React', 'Node.js', 'AWS', 'Docker', 'Kubernetes', 'Machine Learning', 'Data Science', 'SQL', 'MongoDB', 'Redis', 'GraphQL', 'TypeScript']
+                
+                for i in range(min(limit, 8)):
+                    demo_candidates.append({
+                        'name': f'Demo Candidate {i+1}',
+                        'headline': f'Senior {query.split()[0] if query else "Software"} Developer',
+                        'current_company': random.choice(companies),
+                        'location': location or random.choice(locations),
+                        'linkedin_url': f'https://linkedin.com/in/demo-user-{i+1}',
+                        'skills': random.sample(skills_pool, random.randint(4, 8)),
+                        'experience_years': random.randint(3, 12),
+                        'education': random.choice(['BS Computer Science', 'MS Software Engineering', 'BS Information Technology', 'PhD Computer Science'])
+                    })
+                return demo_candidates
+            
+            async def score_candidate(self, candidate, job_description):
+                # Generate realistic fit scores
+                base_score = random.uniform(6.0, 9.5)
+                # Add some logic based on candidate data
+                if 'Senior' in candidate.get('headline', ''):
+                    base_score += 0.3
+                if candidate.get('experience_years', 0) > 5:
+                    base_score += 0.2
+                
+                candidate['fit_score'] = round(min(base_score, 10.0), 1)
+                candidate['score_breakdown'] = {
+                    'skills_match': round(random.uniform(7.0, 9.0), 1),
+                    'experience_level': round(random.uniform(6.5, 9.5), 1),
+                    'location_preference': round(random.uniform(8.0, 10.0), 1),
+                    'culture_fit': round(random.uniform(7.5, 9.0), 1)
+                }
+                return candidate
+        
+        class MockOutreachGenerator:
+            def __init__(self, use_ai=True):
+                self.use_ai = use_ai
+            
+            async def generate_message(self, candidate, job_description):
+                name = candidate.get('name', 'there')
+                company = candidate.get('current_company', 'your current company')
+                headline = candidate.get('headline', 'professional background')
+                
+                # Generate more personalized messages
+                templates = [
+                    f"""Hi {name},
+
+I hope this message finds you well! I came across your profile and was impressed by your experience as a {headline} at {company}.
+
+We're currently seeking talented professionals for an exciting opportunity that aligns well with your background. Based on your expertise and experience, I believe this could be a great fit for your career growth.
+
+Would you be open to a brief conversation to learn more about this opportunity?
+
+Best regards,
+[Your Name]""",
+                    
+                    f"""Hello {name},
+
+Your background as a {headline} at {company} caught my attention, and I'd love to connect with you about a role that might interest you.
+
+We're building an innovative team and looking for someone with your skill set. I think you'd find the challenges and growth opportunities compelling.
+
+Are you currently open to exploring new opportunities? I'd be happy to share more details.
+
+Best,
+[Your Name]""",
+                    
+                    f"""Hi {name},
+
+I noticed your impressive work at {company} and wanted to reach out about a position that seems tailor-made for someone with your background.
+
+This role offers the chance to work with cutting-edge technologies and make a significant impact. Given your experience as a {headline}, I think you'd find it both challenging and rewarding.
+
+Would you be interested in a quick call to discuss this further?
+
+Looking forward to hearing from you,
+[Your Name]"""
+                ]
+                
+                message = random.choice(templates)
+                
+                return {
+                    'message': message,
+                    'confidence': random.choice(['High', 'Medium-High', 'High']),
+                    'personalization_score': round(random.uniform(8.0, 9.5), 1),
+                    'template_used': f'Template {random.randint(1, 3)}',
+                    'estimated_response_rate': f"{random.randint(15, 35)}%"
+                }
+        
+        # Use mock classes
+        LinkedInSourcingAgent = MockLinkedInSourcingAgent
+        OutreachGenerator = MockOutreachGenerator
+        
+        def setup_logging():
+            pass
 
 # Setup logging
 setup_logging()
@@ -83,7 +224,13 @@ if not st.session_state.agent_initialized:
         with st.spinner("Initializing LinkedIn Sourcing Agent..."):
             st.session_state.agent = LinkedInSourcingAgent()
             st.session_state.agent_initialized = True
-        st.success("✅ Agent initialized successfully!")
+        
+        if import_success:
+            st.success("✅ Agent initialized successfully with full functionality!")
+        else:
+            st.success("✅ Agent initialized in demo mode!")
+            st.info("💡 Demo mode provides realistic sample data for testing the interface.")
+            
     except Exception as e:
         st.error(f"Failed to auto-initialize agent: {str(e)}")
         st.info("Please manually initialize the agent using the sidebar button.")

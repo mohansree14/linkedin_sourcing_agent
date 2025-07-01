@@ -1,0 +1,3 @@
+[console_scripts]
+linkedin-agent = linkedin_sourcing_agent.cli:main
+linkedin-sourcing-agent = linkedin_sourcing_agent.cli:main

@@ -1,0 +1,155 @@
+2025-07-01 14:26:07,349 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:24,568 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:25,183 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:25,228 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-07-01 14:29:25,232 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-07-01 14:29:25,233 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-07-01 14:29:25,273 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-07-01 14:29:25,273 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-07-01 14:29:25,313 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-07-01 14:29:25,314 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-07-01 14:29:25,314 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-07-01 14:29:25,314 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-07-01 14:29:25,314 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-07-01 14:29:25,314 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-07-01 14:29:25,314 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-07-01 14:29:25,315 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-07-01 14:29:25,315 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-07-01 14:29:25,315 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-07-01 14:29:25,316 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-07-01 14:29:25,316 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-07-01 14:29:36,088 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:36,470 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:38,274 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:41,568 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:42,053 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:42,750 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:44,333 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:29:44,339 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:74 - Initializing LinkedIn Sourcing Agent...
+2025-07-01 14:29:44,342 - linkedin_sourcing_agent.utils.config_manager - [33mWARNING[0m - config_manager.py:220 - Missing API keys: OPENAI_API_KEY, RAPIDAPI_KEY (agent will use fallback modes)
+2025-07-01 14:29:44,342 - linkedin_sourcing_agent.utils.config_manager - [32mINFO[0m - config_manager.py:99 - Configuration loaded for environment: development
+2025-07-01 14:29:44,387 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-07-01 14:29:44,389 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:67 - LinkedIn scraper initialized (RapidAPI: Disabled)
+2025-07-01 14:29:44,427 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 10/60s
+2025-07-01 14:29:44,428 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-07-01 14:29:44,428 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 20/60s
+2025-07-01 14:29:44,428 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 15/60s
+2025-07-01 14:29:44,428 - linkedin_sourcing_agent.scrapers.multi_source_scraper - [32mINFO[0m - multi_source_scraper.py:79 - Multi-source profile scraper initialized
+2025-07-01 14:29:44,428 - linkedin_sourcing_agent.scoring.fit_scorer - [32mINFO[0m - fit_scorer.py:115 - Candidate fit scorer initialized with professional scoring rubric
+2025-07-01 14:29:44,429 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-07-01 14:29:44,429 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:122 - Using template-based message generation
+2025-07-01 14:29:44,429 - linkedin_sourcing_agent.generators.outreach_generator - [32mINFO[0m - outreach_generator.py:99 - OutreachGenerator initialized - AI: False, Model: gpt-3.5-turbo
+2025-07-01 14:29:44,429 - linkedin_sourcing_agent.utils.rate_limiter - [32mINFO[0m - rate_limiter.py:98 - Rate limiter initialized: 30/60s
+2025-07-01 14:29:44,430 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:117 - All components initialized successfully
+2025-07-01 14:29:44,430 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:91 - LinkedIn Sourcing Agent initialized successfully
+2025-07-01 14:30:59,030 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:31:18,280 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:31:36,893 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:32:01,070 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:32:46,638 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:32:47,653 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:32:47,669 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='MLOps ,langraph,Autogen', location='United Kingdom', limit=40
+2025-07-01 14:32:47,769 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-07-01 14:32:47,770 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 40 demo candidates for query: 'MLOps ,langraph,Autogen United Kingdom'
+2025-07-01 14:32:47,771 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 1 demo candidates
+2025-07-01 14:32:47,771 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 1 candidates for query: 'MLOps ,langraph,Autogen United Kingdom' (Demo: True)
+2025-07-01 14:32:47,771 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 1 candidates
+2025-07-01 14:32:47,868 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:33:09,329 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:33:09,337 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='MLOps ,langraph,Autogen', location='United Kingdom', limit=40
+2025-07-01 14:33:09,428 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-07-01 14:33:09,429 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 40 demo candidates for query: 'MLOps ,langraph,Autogen United Kingdom'
+2025-07-01 14:33:09,429 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 1 demo candidates
+2025-07-01 14:33:09,429 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 1 candidates for query: 'MLOps ,langraph,Autogen United Kingdom' (Demo: True)
+2025-07-01 14:33:09,429 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 1 candidates
+2025-07-01 14:33:09,509 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:33:12,162 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:33:12,177 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:03,654 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:03,910 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:03,920 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo', location='United Kingdom', limit=40
+2025-07-01 14:34:03,991 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-07-01 14:34:03,992 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 40 demo candidates for query: 'AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo United Kingdom'
+2025-07-01 14:34:03,992 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 3 demo candidates
+2025-07-01 14:34:03,992 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 3 candidates for query: 'AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo United Kingdom' (Demo: True)
+2025-07-01 14:34:03,993 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 3 candidates
+2025-07-01 14:34:04,072 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:07,142 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:07,154 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo', location='United Kingdom', limit=40
+2025-07-01 14:34:07,232 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-07-01 14:34:07,232 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 40 demo candidates for query: 'AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo United Kingdom'
+2025-07-01 14:34:07,233 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 3 demo candidates
+2025-07-01 14:34:07,233 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 3 candidates for query: 'AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo United Kingdom' (Demo: True)
+2025-07-01 14:34:07,233 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 3 candidates
+2025-07-01 14:34:07,310 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:09,085 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
+2025-07-01 14:34:09,097 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:447 - Searching for candidates: query='AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo', location='United Kingdom', limit=40
+2025-07-01 14:34:09,169 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:102 - No API keys available - using demo data for testing
+2025-07-01 14:34:09,169 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:47 - Generating 40 demo candidates for query: 'AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo United Kingdom'
+2025-07-01 14:34:09,169 - linkedin_sourcing_agent.utils.demo_data - [32mINFO[0m - demo_data.py:72 - Generated 3 demo candidates
+2025-07-01 14:34:09,169 - linkedin_sourcing_agent.scrapers.linkedin_scraper - [32mINFO[0m - linkedin_scraper.py:114 - Found 3 candidates for query: 'AI Developer – Contract (LLM / Vertex AI / GCP)
+
+
+
+Location: Remote UK
+Type: Contract 
+
+Length: 6 mo United Kingdom' (Demo: True)
+2025-07-01 14:34:09,170 - linkedin_sourcing_agent.core.agent - [32mINFO[0m - agent.py:466 - Found 3 candidates
+2025-07-01 14:34:09,248 - linkedin_sourcing_agent.utils.logging_config - [32mINFO[0m - logging_config.py:104 - Logging configured - Level: INFO, File: logs/linkedin_agent_20250701.log
