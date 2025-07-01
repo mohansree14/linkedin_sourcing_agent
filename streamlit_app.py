@@ -353,7 +353,7 @@ with tab2:
             title="Candidate Score Distribution",
             labels={'x': 'Fit Score', 'y': 'Number of Candidates'}
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="score_distribution_chart")
         
         # Candidate list
         st.subheader("Candidate Details")
@@ -400,7 +400,7 @@ with tab2:
                         }
                     ))
                     fig.update_layout(height=200)
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, use_container_width=True, key=f"candidate_gauge_{i}")
         
         # Export options
         st.subheader("📥 Export Options")
@@ -531,7 +531,7 @@ with tab4:
                 y='results',
                 title="Search Results Over Time"
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, use_container_width=True, key="search_trends_chart")
     
     if st.session_state.candidates:
         # Candidate insights
@@ -548,7 +548,7 @@ with tab4:
             title="Top Companies",
             labels={'x': 'Number of Candidates', 'y': 'Company'}
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="company_distribution_chart")
         
         # Location distribution
         locations = [c.get('location', 'Unknown').split(',')[0] for c in st.session_state.candidates]
@@ -559,7 +559,7 @@ with tab4:
             names=location_counts.index,
             title="Candidate Locations"
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="location_distribution_chart")
     
     # Performance metrics
     st.subheader("System Performance")
